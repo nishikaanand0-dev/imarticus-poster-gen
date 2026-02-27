@@ -1,5 +1,5 @@
 import { Monitor, TrendingUp, MessageCircle, Calendar, Clock, Video, KeyRound, Hash, type LucideIcon } from "lucide-react";
-import imarticusLogo from "@/assets/imarticus-logo.png";
+import imarticusLogo from "@/assets/imarticus-logo.svg";
 
 const SessionPoster = () => {
   const agendaItems = [
@@ -34,7 +34,8 @@ const SessionPoster = () => {
             <img
               src={imarticusLogo}
               alt="Imarticus Learning"
-              className="h-20 w-auto object-contain brightness-0 invert drop-shadow-lg"
+              className="h-12 w-auto object-contain drop-shadow-lg"
+              style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
           <div className="text-center">
