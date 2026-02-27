@@ -36,12 +36,12 @@
 
     --radius: 0.75rem;
 
-    --poster-header-from: 212 85% 18%;
-    --poster-header-via: 212 75% 28%;
-    --poster-header-to: 200 70% 35%;
-    --poster-glow: 0 12px 48px hsl(212 80% 32% / 0.25);
-    --poster-card-shadow: 0 6px 24px hsl(212 80% 32% / 0.1);
-    --poster-card-hover: 0 8px 32px hsl(212 80% 32% / 0.18);
+    --poster-header-from: 160 90% 12%;
+    --poster-header-via: 162 80% 22%;
+    --poster-header-to: 168 70% 28%;
+    --poster-glow: 0 12px 48px hsl(160 80% 20% / 0.25);
+    --poster-card-shadow: 0 6px 24px hsl(160 80% 20% / 0.1);
+    --poster-card-hover: 0 8px 32px hsl(160 80% 20% / 0.18);
     --poster-gold: 42 92% 56%;
     --poster-gold-light: 42 90% 72%;
 
