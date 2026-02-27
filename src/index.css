@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,39 +6,44 @@
 
 @layer base {
   :root {
-    --background: 150 20% 97%;
-    --foreground: 160 30% 10%;
+    --background: 216 30% 96%;
+    --foreground: 220 40% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 30% 10%;
+    --card-foreground: 220 40% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 30% 10%;
+    --popover-foreground: 220 40% 13%;
 
-    --primary: 160 100% 20%;
+    --primary: 212 80% 32%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 40% 94%;
-    --secondary-foreground: 160 100% 20%;
+    --secondary: 212 30% 94%;
+    --secondary-foreground: 212 80% 32%;
 
-    --muted: 150 15% 93%;
-    --muted-foreground: 160 10% 45%;
+    --muted: 216 20% 92%;
+    --muted-foreground: 216 15% 50%;
 
-    --accent: 45 100% 55%;
-    --accent-foreground: 160 30% 10%;
+    --accent: 42 92% 56%;
+    --accent-foreground: 220 40% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 160 20% 88%;
-    --input: 160 20% 88%;
-    --ring: 160 100% 20%;
+    --border: 216 20% 88%;
+    --input: 216 20% 88%;
+    --ring: 212 80% 32%;
 
     --radius: 0.75rem;
 
-    --poster-gradient: linear-gradient(135deg, hsl(160, 100%, 18%) 0%, hsl(170, 80%, 25%) 50%, hsl(160, 100%, 20%) 100%);
-    --poster-glow: 0 8px 32px hsl(160 100% 20% / 0.15);
-    --poster-card-shadow: 0 4px 20px hsl(160 100% 20% / 0.08);
+    --poster-header-from: 212 85% 18%;
+    --poster-header-via: 212 75% 28%;
+    --poster-header-to: 200 70% 35%;
+    --poster-glow: 0 12px 48px hsl(212 80% 32% / 0.25);
+    --poster-card-shadow: 0 6px 24px hsl(212 80% 32% / 0.1);
+    --poster-card-hover: 0 8px 32px hsl(212 80% 32% / 0.18);
+    --poster-gold: 42 92% 56%;
+    --poster-gold-light: 42 90% 72%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -51,25 +56,25 @@
   }
 
   .dark {
-    --background: 160 30% 6%;
-    --foreground: 150 20% 95%;
-    --card: 160 25% 10%;
-    --card-foreground: 150 20% 95%;
-    --popover: 160 25% 10%;
-    --popover-foreground: 150 20% 95%;
-    --primary: 160 80% 45%;
-    --primary-foreground: 160 30% 6%;
-    --secondary: 160 25% 15%;
-    --secondary-foreground: 150 20% 95%;
-    --muted: 160 20% 15%;
-    --muted-foreground: 150 15% 60%;
-    --accent: 45 100% 55%;
-    --accent-foreground: 160 30% 6%;
+    --background: 220 30% 7%;
+    --foreground: 216 20% 92%;
+    --card: 220 25% 12%;
+    --card-foreground: 216 20% 92%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 216 20% 92%;
+    --primary: 212 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 212 25% 18%;
+    --secondary-foreground: 216 20% 92%;
+    --muted: 220 20% 16%;
+    --muted-foreground: 216 15% 55%;
+    --accent: 42 92% 56%;
+    --accent-foreground: 220 40% 13%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 160 20% 18%;
-    --input: 160 20% 18%;
-    --ring: 160 80% 45%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 212 70% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
