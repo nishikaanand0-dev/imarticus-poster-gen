@@ -3,9 +3,7 @@ import imarticusLogo from "@/assets/imarticus-logo.svg";
 
 const SessionPoster = () => {
   const agendaItems = [
-    { icon: Monitor, label: "Query Resolving", desc: "Get your doubts cleared by experts" },
-    { icon: TrendingUp, label: "Career Guidance", desc: "Plan your next career move" },
-    { icon: MessageCircle, label: "Discussion", desc: "Interactive peer-to-peer learning" },
+    { icon: Monitor, label: "Introduction to Product Management", desc: "Role, Lifecycle, Career Paths" },
   ];
 
   return (
@@ -43,7 +41,7 @@ const SessionPoster = () => {
               Upcoming Session
             </p>
             <h1 className="text-3xl md:text-4xl font-black tracking-tight leading-tight drop-shadow-sm">
-              IIT Roorkee HRMA 05
+              IBM AIPM
             </h1>
           </div>
         </div>
@@ -58,11 +56,11 @@ const SessionPoster = () => {
       <div className="bg-secondary text-secondary-foreground flex flex-wrap items-center justify-center gap-6 md:gap-10 py-4 px-6 text-sm font-bold border-b border-border">
         <span className="flex items-center gap-2.5">
           <Calendar size={18} className="text-primary" />
-          25-Feb-2026 (Wednesday)
+          7-Feb-2026 (Saturday)
         </span>
         <span className="flex items-center gap-2.5">
           <Clock size={18} className="text-primary" />
-          9:00 PM – 10:30 PM
+          4:00 PM – 7:00 PM
         </span>
       </div>
 
