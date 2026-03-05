@@ -10,6 +10,9 @@ const SessionPoster = () => {
       icon: Monitor,
       label: "Introduction to Product Management",
       desc: "Role, Lifecycle, Career Paths",
+      zoomLink: "https://zoom.us/meeting/register/HFuHH_IwQJSaTNjFMY2Ybw",
+      meetingId: "935 4062 8984",
+      passcode: "0000",
     },
     {
       day: "Sunday",
@@ -17,7 +20,10 @@ const SessionPoster = () => {
       time: "10:00 AM – 1:00 PM",
       icon: TrendingUp,
       label: "Product Thinking & Problem Framing",
-      desc: "Ideation, User Needs, Frameworks",
+      desc: "Problem vs Solution Mindset, Outcome vs Output, Basic Problem-Framing Templates, Examples of AI-Assisted PM Workflows. Value Creation, Value Communication, Value Delivery.",
+      zoomLink: "https://zoom.us/meeting/register/7nNu_SuwRRCXFFhZoWn9EQ",
+      meetingId: "959 4391 3905",
+      passcode: "0000",
     },
   ];
 
@@ -69,72 +75,66 @@ const SessionPoster = () => {
 
       {/* Body */}
       <div className="relative bg-card px-6 py-6 space-y-5">
+        {/* Faculty */}
+        <div className="flex items-center gap-3 bg-secondary rounded-xl px-5 py-3 border border-border/50">
+          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
+            <MessageCircle size={14} className="text-primary-foreground" />
+          </div>
+          <div>
+            <span className="text-muted-foreground text-xs font-medium">Faculty</span>
+            <span className="font-bold text-card-foreground block text-sm leading-tight">Sanjoy Paul</span>
+          </div>
+        </div>
+
         {/* Session Schedule */}
-        <div>
-          <h2 className="text-xs font-extrabold tracking-[0.2em] uppercase text-muted-foreground mb-3">
-            Session Schedule
-          </h2>
-          <div className="space-y-3">
-            {sessions.map(({ day, date, time, icon: Icon, label, desc }) => (
-              <div
-                key={day}
-                className="bg-secondary rounded-xl px-5 py-4 shadow-[var(--poster-card-shadow)] border border-border/50"
-              >
-                <div className="flex items-center gap-4 mb-2 text-xs font-bold text-muted-foreground">
-                  <span className="flex items-center gap-1.5">
-                    <Calendar size={14} className="text-primary" />
-                    {date} ({day})
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <Clock size={14} className="text-primary" />
-                    {time}
-                  </span>
+        {sessions.map(({ day, date, time, icon: Icon, label, desc, zoomLink, meetingId, passcode }, idx) => (
+          <div key={day}>
+            <h2 className="text-xs font-extrabold tracking-[0.2em] uppercase text-muted-foreground mb-3">
+              Session {idx + 1} — {day}
+            </h2>
+            <div className="bg-secondary rounded-xl px-5 py-4 shadow-[var(--poster-card-shadow)] border border-border/50 space-y-3">
+              <div className="flex items-center gap-4 text-xs font-bold text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  <Calendar size={14} className="text-primary" />
+                  {date}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Clock size={14} className="text-primary" />
+                  {time}
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+                  <Icon size={16} className="text-primary-foreground" />
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm">
-                    <Icon size={16} className="text-primary-foreground" />
-                  </div>
-                  <div>
-                    <span className="font-bold text-card-foreground block leading-tight text-sm">{label}</span>
-                    <span className="text-xs text-muted-foreground">{desc}</span>
-                  </div>
+                <div>
+                  <span className="font-bold text-card-foreground block leading-tight text-sm">{label}</span>
+                  <span className="text-xs text-muted-foreground leading-relaxed">{desc}</span>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Gold Divider */}
-        <div className="flex items-center gap-3">
-          <div className="flex-1 h-px bg-border" />
-          <div className="w-2 h-2 rounded-full" style={{ background: `hsl(var(--poster-gold))` }} />
-          <div className="flex-1 h-px bg-border" />
-        </div>
-
-        {/* Meeting Details */}
-        <div>
-          <h2 className="text-xs font-extrabold tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Meeting Details
-          </h2>
-          <div className="space-y-3.5 text-sm">
-            <DetailRow
-              icon={Video}
-              label="Session Link"
-              value={
-                <a
-                  href="https://zoom.us/j/92218782880?pwd=HqCfPzETbQl7sZ47slebxs5RBs9RMT.1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary break-all transition-colors"
-                >
-                  Join Zoom Meeting →
-                </a>
-              }
-            />
-            <DetailRow icon={Hash} label="Meeting ID" value="922 1878 2880" />
-            <DetailRow icon={KeyRound} label="Passcode" value="0000" />
+              {/* Zoom details per session */}
+              <div className="border-t border-border/50 pt-3 space-y-2 text-sm">
+                <DetailRow
+                  icon={Video}
+                  label="Zoom Link"
+                  value={
+                    <a
+                      href={zoomLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary break-all transition-colors text-xs"
+                    >
+                      Register & Join →
+                    </a>
+                  }
+                />
+                <DetailRow icon={Hash} label="Meeting ID" value={meetingId} />
+                <DetailRow icon={KeyRound} label="Passcode" value={passcode} />
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
 
       {/* Footer */}
