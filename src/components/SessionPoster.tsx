@@ -2,12 +2,27 @@ import { Monitor, TrendingUp, MessageCircle, Calendar, Clock, Video, KeyRound, H
 import imarticusLogo from "@/assets/imarticus-logo.svg";
 
 const SessionPoster = () => {
-  const agendaItems = [
-    { icon: Monitor, label: "Introduction to Product Management", desc: "Role, Lifecycle, Career Paths" },
+  const sessions = [
+    {
+      day: "Saturday",
+      date: "7-Feb-2026",
+      time: "4:00 PM – 7:00 PM",
+      icon: Monitor,
+      label: "Introduction to Product Management",
+      desc: "Role, Lifecycle, Career Paths",
+    },
+    {
+      day: "Sunday",
+      date: "8-Feb-2026",
+      time: "10:00 AM – 1:00 PM",
+      icon: TrendingUp,
+      label: "Product Thinking & Problem Framing",
+      desc: "Ideation, User Needs, Frameworks",
+    },
   ];
 
   return (
-    <div className="w-full max-w-[620px] rounded-3xl overflow-hidden shadow-[var(--poster-glow)] border border-border relative">
+    <div className="w-[540px] rounded-3xl overflow-hidden shadow-[var(--poster-glow)] border border-border relative">
       {/* Subtle academic background pattern */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -52,37 +67,37 @@ const SessionPoster = () => {
         }} />
       </div>
 
-      {/* Date & Time strip */}
-      <div className="bg-secondary text-secondary-foreground flex flex-wrap items-center justify-center gap-6 md:gap-10 py-4 px-6 text-sm font-bold border-b border-border">
-        <span className="flex items-center gap-2.5">
-          <Calendar size={18} className="text-primary" />
-          7-Feb-2026 (Saturday)
-        </span>
-        <span className="flex items-center gap-2.5">
-          <Clock size={18} className="text-primary" />
-          4:00 PM – 7:00 PM
-        </span>
-      </div>
-
       {/* Body */}
-      <div className="relative bg-card px-8 py-8 space-y-7">
-        {/* Agenda Section */}
+      <div className="relative bg-card px-6 py-6 space-y-5">
+        {/* Session Schedule */}
         <div>
-          <h2 className="text-xs font-extrabold tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Session Agenda
+          <h2 className="text-xs font-extrabold tracking-[0.2em] uppercase text-muted-foreground mb-3">
+            Session Schedule
           </h2>
           <div className="space-y-3">
-            {agendaItems.map(({ icon: Icon, label, desc }) => (
+            {sessions.map(({ day, date, time, icon: Icon, label, desc }) => (
               <div
-                key={label}
-                className="flex items-center gap-4 bg-secondary rounded-xl px-5 py-4 shadow-[var(--poster-card-shadow)] hover:shadow-[var(--poster-card-hover)] transition-all duration-300 border border-border/50"
+                key={day}
+                className="bg-secondary rounded-xl px-5 py-4 shadow-[var(--poster-card-shadow)] border border-border/50"
               >
-                <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shrink-0 shadow-sm">
-                  <Icon size={18} className="text-primary-foreground" />
+                <div className="flex items-center gap-4 mb-2 text-xs font-bold text-muted-foreground">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={14} className="text-primary" />
+                    {date} ({day})
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={14} className="text-primary" />
+                    {time}
+                  </span>
                 </div>
-                <div>
-                  <span className="font-bold text-card-foreground block leading-tight">{label}</span>
-                  <span className="text-xs text-muted-foreground">{desc}</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm">
+                    <Icon size={16} className="text-primary-foreground" />
+                  </div>
+                  <div>
+                    <span className="font-bold text-card-foreground block leading-tight text-sm">{label}</span>
+                    <span className="text-xs text-muted-foreground">{desc}</span>
+                  </div>
                 </div>
               </div>
             ))}
