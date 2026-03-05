@@ -125,7 +125,7 @@ const SessionPoster = () => {
                       rel="noopener noreferrer"
                       className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary break-all transition-colors text-xs"
                     >
-                      Register & Join →
+                      Click Here
                     </a>
                   }
                 />
