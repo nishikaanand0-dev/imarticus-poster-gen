@@ -28,118 +28,84 @@ const SessionPoster = () => {
   ];
 
   return (
-    <div className="w-[540px] rounded-3xl overflow-hidden shadow-[var(--poster-glow)] border border-border relative">
-      {/* Subtle academic background pattern */}
+    <div className="w-[540px] rounded-2xl overflow-hidden shadow-[var(--poster-glow)] border border-border relative">
+      {/* Header - compact */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Header with deep blue gradient */}
-      <div
-        className="relative px-8 pt-10 pb-8 text-primary-foreground overflow-hidden"
+        className="relative px-6 pt-6 pb-5 text-primary-foreground overflow-hidden"
         style={{
           background: `linear-gradient(135deg, hsl(var(--poster-header-from)) 0%, hsl(var(--poster-header-via)) 50%, hsl(var(--poster-header-to)) 100%)`,
         }}
       >
-        {/* Decorative circles */}
-        <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-primary-foreground/5" />
-        <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-primary-foreground/5" />
-
-        <div className="relative z-10">
-          <div className="flex justify-center mb-6">
-            <img
-              src={imarticusLogo}
-              alt="Imarticus Learning"
-              className="h-12 w-auto object-contain drop-shadow-lg"
-              style={{ filter: "brightness(0) invert(1)" }}
-            />
+        <div className="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-primary-foreground/5" />
+        <div className="relative z-10 flex items-center justify-between">
+          <div>
+            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase opacity-70 mb-1">Upcoming Session</p>
+            <h1 className="text-2xl font-black tracking-tight leading-none">IBM AIPM</h1>
+            <p className="text-[10px] opacity-70 mt-1">Faculty: <span className="font-bold opacity-100">Sanjoy Paul</span></p>
           </div>
-          <div className="text-center">
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase opacity-70 mb-2">
-              Upcoming Session
-            </p>
-            <h1 className="text-3xl md:text-4xl font-black tracking-tight leading-tight drop-shadow-sm">
-              IBM AIPM
-            </h1>
-          </div>
+          <img
+            src={imarticusLogo}
+            alt="Imarticus Learning"
+            className="h-9 w-auto object-contain"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
         </div>
-
-        {/* Gold accent divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-1" style={{
+        <div className="absolute bottom-0 left-0 right-0 h-0.5" style={{
           background: `linear-gradient(90deg, transparent 0%, hsl(var(--poster-gold)) 20%, hsl(var(--poster-gold-light)) 50%, hsl(var(--poster-gold)) 80%, transparent 100%)`,
         }} />
       </div>
 
-      {/* Body */}
-      <div className="relative bg-card px-6 py-6 space-y-5">
-        {/* Faculty */}
-        <div className="flex items-center gap-3 bg-secondary rounded-xl px-5 py-3 border border-border/50">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-            <MessageCircle size={14} className="text-primary-foreground" />
-          </div>
-          <div>
-            <span className="text-muted-foreground text-xs font-medium">Faculty</span>
-            <span className="font-bold text-card-foreground block text-sm leading-tight">Sanjoy Paul</span>
-          </div>
-        </div>
-
-        {/* Session Schedule */}
+      {/* Body - compact */}
+      <div className="relative bg-card px-5 py-4 space-y-3">
         {sessions.map(({ day, date, time, icon: Icon, label, desc, zoomLink, meetingId, passcode }, idx) => (
-          <div key={day}>
-            <h2 className="text-xs font-extrabold tracking-[0.2em] uppercase text-muted-foreground mb-3">
-              Session {idx + 1} — {day}
-            </h2>
-            <div className="bg-secondary rounded-xl px-5 py-4 shadow-[var(--poster-card-shadow)] border border-border/50 space-y-3">
-              <div className="flex items-center gap-4 text-xs font-bold text-muted-foreground">
-                <span className="flex items-center gap-1.5">
-                  <Calendar size={14} className="text-primary" />
+          <div key={day} className="bg-secondary rounded-lg px-4 py-3 border border-border/50 space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-extrabold tracking-[0.15em] uppercase text-muted-foreground">
+                Session {idx + 1} — {day}
+              </span>
+              <div className="flex items-center gap-3 text-[10px] font-bold text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <Calendar size={10} className="text-primary" />
                   {date}
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <Clock size={14} className="text-primary" />
+                <span className="flex items-center gap-1">
+                  <Clock size={10} className="text-primary" />
                   {time}
                 </span>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
-                  <Icon size={16} className="text-primary-foreground" />
-                </div>
-                <div>
-                  <span className="font-bold text-card-foreground block leading-tight text-sm">{label}</span>
-                  <span className="text-xs text-muted-foreground leading-relaxed">{desc}</span>
-                </div>
+            </div>
+            <div className="flex items-start gap-2.5">
+              <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center shrink-0 mt-0.5">
+                <Icon size={13} className="text-primary-foreground" />
               </div>
-
-              {/* Zoom details per session */}
-              <div className="border-t border-border/50 pt-3 space-y-2 text-sm">
-                <DetailRow
-                  icon={Video}
-                  label="Zoom Link"
-                  value={
-                    <a
-                      href={zoomLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary break-all transition-colors text-xs"
-                    >
-                      Click Here
-                    </a>
-                  }
-                />
-                <DetailRow icon={Hash} label="Meeting ID" value={meetingId} />
-                <DetailRow icon={KeyRound} label="Passcode" value={passcode} />
+              <div>
+                <span className="font-bold text-card-foreground block leading-tight text-xs">{label}</span>
+                <span className="text-[10px] text-muted-foreground leading-snug block">{desc}</span>
               </div>
+            </div>
+            <div className="flex items-center gap-4 text-[10px] border-t border-border/50 pt-2">
+              <span className="flex items-center gap-1 text-muted-foreground">
+                <Video size={10} className="text-primary" />
+                <a href={zoomLink} target="_blank" rel="noopener noreferrer" className="text-primary font-semibold underline underline-offset-2">
+                  Click Here
+                </a>
+              </span>
+              <span className="flex items-center gap-1 text-muted-foreground">
+                <Hash size={10} className="text-primary" />
+                {meetingId}
+              </span>
+              <span className="flex items-center gap-1 text-muted-foreground">
+                <KeyRound size={10} className="text-primary" />
+                {passcode}
+              </span>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Footer */}
+      {/* Footer - slim */}
       <div
-        className="px-8 py-4 text-center text-primary-foreground text-xs font-semibold tracking-wider"
+        className="px-6 py-2.5 text-center text-primary-foreground text-[10px] font-semibold tracking-wider"
         style={{
           background: `linear-gradient(135deg, hsl(var(--poster-header-from)) 0%, hsl(var(--poster-header-via)) 100%)`,
         }}
