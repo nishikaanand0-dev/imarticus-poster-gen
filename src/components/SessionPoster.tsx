@@ -18,7 +18,7 @@ const SessionPoster = () => {
   const sessions = [
     {
       day: "Saturday",
-      date: "7-Feb-2026",
+      date: "14-Mar-2026",
       time: "4:00 PM – 7:00 PM",
       icon: Monitor,
       label: "Introduction to Product Management",
@@ -29,7 +29,7 @@ const SessionPoster = () => {
     },
     {
       day: "Sunday",
-      date: "8-Feb-2026",
+      date: "15-Mar-2026",
       time: "10:00 AM – 1:00 PM",
       icon: TrendingUp,
       label: "Product Thinking & Problem Framing",
