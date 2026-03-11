@@ -29,7 +29,7 @@ const SessionPoster = () => {
     },
     {
       day: "Sunday",
-      date: "8-Feb-2026",
+      date: "15-Mar-2026",
       time: "10:00 AM – 1:00 PM",
       icon: TrendingUp,
       label: "Product Thinking & Problem Framing",
