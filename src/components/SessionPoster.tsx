@@ -18,7 +18,7 @@ const SessionPoster = () => {
   const sessions = [
     {
       day: "Saturday",
-      date: "7-Feb-2026",
+      date: "14-Mar-2026",
       time: "4:00 PM – 7:00 PM",
       icon: Monitor,
       label: "Introduction to Product Management",
