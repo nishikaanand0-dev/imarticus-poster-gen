@@ -146,7 +146,7 @@ const SessionPoster = () => {
               >
                 {idx + 1}
               </span>
-              <span className="text-[9px] font-extrabold tracking-[0.2em] uppercase opacity-50">
+              <span className="text-[11px] font-black tracking-[0.15em] uppercase opacity-70">
                 Session {idx + 1} — {day}
               </span>
             </div>
