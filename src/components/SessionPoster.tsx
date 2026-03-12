@@ -104,8 +104,6 @@ const SessionPoster = () => {
           style={{ filter: "brightness(0) invert(1)" }}
         />
         <div className="flex items-center gap-1.5 text-[9px] font-bold tracking-[0.2em] uppercase opacity-50">
-          <Sparkles size={10} />
-          Live Session
         </div>
       </div>
 
