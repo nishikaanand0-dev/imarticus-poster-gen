@@ -101,13 +101,6 @@ const SessionPoster = () => {
 
       {/* ─── HERO ─── */}
       <div className="relative px-6 pt-5 pb-7 text-center">
-        <div className="inline-flex items-center gap-1.5 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-full px-3.5 py-1.5 mb-5">
-          <CircuitBoard size={12} className="opacity-60" />
-          <span className="text-[9px] font-bold tracking-[0.25em] uppercase opacity-70">
-            AI-Powered Product Management
-          </span>
-        </div>
-
         <h1 className="text-[52px] font-black tracking-tighter leading-none mb-1">
           IBM{" "}
           <span
@@ -121,7 +114,7 @@ const SessionPoster = () => {
         </h1>
 
         <p className="text-[11px] font-semibold opacity-45 tracking-[0.3em] uppercase mt-2.5">
-          Weekend Masterclass Series
+          Weekend Sessions
         </p>
 
         {/* Decorative line */}
