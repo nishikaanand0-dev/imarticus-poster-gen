@@ -6,9 +6,7 @@ import {
   Video,
   KeyRound,
   Hash,
-  Rocket,
   Sparkles,
-  CircuitBoard,
   User,
   type LucideIcon,
 } from "lucide-react";
