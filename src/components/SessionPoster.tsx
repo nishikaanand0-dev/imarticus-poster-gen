@@ -215,23 +215,6 @@ const SessionPoster = () => {
         ))}
       </div>
 
-      {/* ─── CTA ─── */}
-      <div className="relative px-6 pb-5">
-        <a
-          href={sessions[0].zoomLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full rounded-xl py-4 text-sm font-extrabold tracking-wide transition-all hover:scale-[1.02] cursor-pointer"
-          style={{
-            background: `linear-gradient(135deg, hsl(var(--poster-gold)) 0%, hsl(var(--poster-gold-light)) 100%)`,
-            color: 'hsl(162,90%,4%)',
-            boxShadow: '0 8px 32px hsla(42,92%,56%,0.30)',
-          }}
-        >
-          <Rocket size={15} />
-          Don't Miss It — Join Now
-        </a>
-      </div>
 
       {/* ─── FOOTER ─── */}
       <div className="relative px-6 py-4 text-center border-t border-white/[0.06]">
