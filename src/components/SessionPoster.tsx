@@ -46,11 +46,23 @@ const SessionPoster = () => {
     <div className="w-[480px] overflow-hidden relative bg-[hsl(162,90%,4%)] text-primary-foreground" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       
       {/* Background logo watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
           src={imarticusLogo}
           alt=""
-          className="w-[420px] h-[420px] object-contain opacity-[0.03]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] object-contain opacity-[0.12]"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
+        <img
+          src={imarticusLogo}
+          alt=""
+          className="absolute top-[10%] left-[5%] w-[120px] h-[120px] object-contain opacity-[0.04] rotate-[-15deg]"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
+        <img
+          src={imarticusLogo}
+          alt=""
+          className="absolute bottom-[15%] right-[5%] w-[100px] h-[100px] object-contain opacity-[0.04] rotate-[10deg]"
           style={{ filter: "brightness(0) invert(1)" }}
         />
       </div>
