@@ -6,9 +6,7 @@ import {
   Video,
   KeyRound,
   Hash,
-  Rocket,
   Sparkles,
-  CircuitBoard,
   User,
   type LucideIcon,
 } from "lucide-react";
@@ -46,11 +44,23 @@ const SessionPoster = () => {
     <div className="w-[480px] overflow-hidden relative bg-[hsl(162,90%,4%)] text-primary-foreground" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       
       {/* Background logo watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
           src={imarticusLogo}
           alt=""
-          className="w-[420px] h-[420px] object-contain opacity-[0.03]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] object-contain opacity-[0.12]"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
+        <img
+          src={imarticusLogo}
+          alt=""
+          className="absolute top-[10%] left-[5%] w-[120px] h-[120px] object-contain opacity-[0.04] rotate-[-15deg]"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
+        <img
+          src={imarticusLogo}
+          alt=""
+          className="absolute bottom-[15%] right-[5%] w-[100px] h-[100px] object-contain opacity-[0.04] rotate-[10deg]"
           style={{ filter: "brightness(0) invert(1)" }}
         />
       </div>
@@ -95,19 +105,12 @@ const SessionPoster = () => {
         />
         <div className="flex items-center gap-1.5 text-[9px] font-bold tracking-[0.2em] uppercase opacity-50">
           <Sparkles size={10} />
-          Live Masterclass
+          Live Session
         </div>
       </div>
 
       {/* ─── HERO ─── */}
       <div className="relative px-6 pt-5 pb-7 text-center">
-        <div className="inline-flex items-center gap-1.5 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-full px-3.5 py-1.5 mb-5">
-          <CircuitBoard size={12} className="opacity-60" />
-          <span className="text-[9px] font-bold tracking-[0.25em] uppercase opacity-70">
-            AI-Powered Product Management
-          </span>
-        </div>
-
         <h1 className="text-[52px] font-black tracking-tighter leading-none mb-1">
           IBM{" "}
           <span
@@ -121,7 +124,7 @@ const SessionPoster = () => {
         </h1>
 
         <p className="text-[11px] font-semibold opacity-45 tracking-[0.3em] uppercase mt-2.5">
-          Weekend Masterclass Series
+          Weekend Sessions
         </p>
 
         {/* Decorative line */}
@@ -210,23 +213,6 @@ const SessionPoster = () => {
         ))}
       </div>
 
-      {/* ─── CTA ─── */}
-      <div className="relative px-6 pb-5">
-        <a
-          href={sessions[0].zoomLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full rounded-xl py-4 text-sm font-extrabold tracking-wide transition-all hover:scale-[1.02] cursor-pointer"
-          style={{
-            background: `linear-gradient(135deg, hsl(var(--poster-gold)) 0%, hsl(var(--poster-gold-light)) 100%)`,
-            color: 'hsl(162,90%,4%)',
-            boxShadow: '0 8px 32px hsla(42,92%,56%,0.30)',
-          }}
-        >
-          <Rocket size={15} />
-          Don't Miss It — Join Now
-        </a>
-      </div>
 
       {/* ─── FOOTER ─── */}
       <div className="relative px-6 py-4 text-center border-t border-white/[0.06]">
