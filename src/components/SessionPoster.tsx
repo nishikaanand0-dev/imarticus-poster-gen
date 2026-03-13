@@ -88,8 +88,16 @@ const SessionPoster = () => {
       <div className="absolute bottom-[-40px] left-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(168,80%,35%,0.14) 0%, transparent 55%)' }} />
 
       {/* Glowing horizontal lines */}
-      <div className="absolute top-[18%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(160,80%,50%,0.12), transparent)' }} />
-      <div className="absolute top-[82%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(160,80%,50%,0.08), transparent)' }} />
+      <div className="absolute top-[18%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(180,80%,60%,0.18), transparent)' }} />
+      <div className="absolute top-[50%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(174,80%,55%,0.1), transparent)' }} />
+      <div className="absolute top-[82%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(180,80%,60%,0.12), transparent)' }} />
+
+      {/* Diagonal light streaks */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-[20%] -left-[10%] w-[140%] h-[30px] rotate-[25deg] opacity-[0.06]" style={{ background: 'linear-gradient(90deg, transparent 0%, hsla(180,90%,70%,0.8) 40%, hsla(174,80%,60%,0.6) 60%, transparent 100%)' }} />
+        <div className="absolute top-[30%] -left-[10%] w-[140%] h-[20px] rotate-[25deg] opacity-[0.04]" style={{ background: 'linear-gradient(90deg, transparent 0%, hsla(174,90%,75%,0.8) 50%, transparent 100%)' }} />
+        <div className="absolute top-[65%] -left-[10%] w-[140%] h-[25px] rotate-[25deg] opacity-[0.05]" style={{ background: 'linear-gradient(90deg, transparent 0%, hsla(180,85%,65%,0.7) 45%, transparent 100%)' }} />
+      </div>
 
       {/* ─── TOP BAR ─── */}
       <div className="relative px-6 pt-6 pb-2 flex items-center justify-between">
