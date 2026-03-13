@@ -7,7 +7,7 @@ import {
   KeyRound,
   Hash,
   User,
-  Award,
+  
   type LucideIcon,
 } from "lucide-react";
 import imarticusLogo from "@/assets/imarticus-logo.svg";
@@ -45,7 +45,7 @@ const SessionPoster = () => {
       className="w-[480px] overflow-hidden relative text-primary-foreground"
       style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
-        background: "linear-gradient(160deg, hsl(168,65%,10%) 0%, hsl(165,55%,7%) 20%, hsl(170,70%,5%) 45%, hsl(162,60%,8%) 70%, hsl(175,50%,6%) 100%)",
+        background: "linear-gradient(160deg, hsl(174,65%,15%) 0%, hsl(178,55%,12%) 20%, hsl(180,60%,9%) 45%, hsl(176,50%,14%) 70%, hsl(172,55%,11%) 100%)",
       }}
     >
       {/* Background logo watermark */}
@@ -59,15 +59,15 @@ const SessionPoster = () => {
       </div>
 
       {/* Tech grid pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-[0.08] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-[0.1] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="techGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="40" y2="0" stroke="hsl(165,80%,45%)" strokeWidth="0.3" />
-            <line x1="0" y1="0" x2="0" y2="40" stroke="hsl(165,80%,45%)" strokeWidth="0.3" />
-            <circle cx="0" cy="0" r="1" fill="hsl(165,80%,55%)" />
+            <line x1="0" y1="0" x2="40" y2="0" stroke="hsl(180,80%,50%)" strokeWidth="0.3" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="hsl(180,80%,50%)" strokeWidth="0.3" />
+            <circle cx="0" cy="0" r="1.2" fill="hsl(180,90%,65%)" />
           </pattern>
           <pattern id="diagLines" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="80" x2="80" y2="0" stroke="hsl(165,70%,40%)" strokeWidth="0.3" />
+            <line x1="0" y1="80" x2="80" y2="0" stroke="hsl(174,70%,45%)" strokeWidth="0.3" />
           </pattern>
           <radialGradient id="gridFade" cx="50%" cy="30%" r="70%">
             <stop offset="0%" stopColor="white" stopOpacity="1" />
@@ -82,14 +82,22 @@ const SessionPoster = () => {
       </svg>
 
       {/* Glowing orbs */}
-      <div className="absolute top-[-60px] right-[-40px] w-[350px] h-[350px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(165,80%,35%,0.22) 0%, transparent 60%)' }} />
-      <div className="absolute bottom-[100px] left-[-60px] w-[280px] h-[280px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(170,70%,30%,0.16) 0%, transparent 60%)' }} />
-      <div className="absolute top-[35%] right-[-20px] w-[250px] h-[250px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(160,90%,40%,0.12) 0%, transparent 55%)' }} />
-      <div className="absolute bottom-[-40px] left-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(168,80%,35%,0.14) 0%, transparent 55%)' }} />
+      <div className="absolute top-[-60px] right-[-40px] w-[350px] h-[350px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(180,80%,45%,0.25) 0%, transparent 60%)' }} />
+      <div className="absolute bottom-[100px] left-[-60px] w-[280px] h-[280px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(174,70%,40%,0.18) 0%, transparent 60%)' }} />
+      <div className="absolute top-[35%] right-[-20px] w-[250px] h-[250px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(180,90%,50%,0.15) 0%, transparent 55%)' }} />
+      <div className="absolute bottom-[-40px] left-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(178,80%,45%,0.16) 0%, transparent 55%)' }} />
 
       {/* Glowing horizontal lines */}
-      <div className="absolute top-[18%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(160,80%,50%,0.12), transparent)' }} />
-      <div className="absolute top-[82%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(160,80%,50%,0.08), transparent)' }} />
+      <div className="absolute top-[18%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(180,80%,60%,0.18), transparent)' }} />
+      <div className="absolute top-[50%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(174,80%,55%,0.1), transparent)' }} />
+      <div className="absolute top-[82%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(180,80%,60%,0.12), transparent)' }} />
+
+      {/* Diagonal light streaks */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-[20%] -left-[10%] w-[140%] h-[30px] rotate-[25deg] opacity-[0.06]" style={{ background: 'linear-gradient(90deg, transparent 0%, hsla(180,90%,70%,0.8) 40%, hsla(174,80%,60%,0.6) 60%, transparent 100%)' }} />
+        <div className="absolute top-[30%] -left-[10%] w-[140%] h-[20px] rotate-[25deg] opacity-[0.04]" style={{ background: 'linear-gradient(90deg, transparent 0%, hsla(174,90%,75%,0.8) 50%, transparent 100%)' }} />
+        <div className="absolute top-[65%] -left-[10%] w-[140%] h-[25px] rotate-[25deg] opacity-[0.05]" style={{ background: 'linear-gradient(90deg, transparent 0%, hsla(180,85%,65%,0.7) 45%, transparent 100%)' }} />
+      </div>
 
       {/* ─── TOP BAR ─── */}
       <div className="relative px-6 pt-6 pb-2 flex items-center justify-between">
@@ -100,21 +108,11 @@ const SessionPoster = () => {
           style={{ filter: "brightness(0) invert(1)" }}
         />
         <div className="flex items-center gap-2">
-          {/* 12 Years badge */}
-          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-accent/30" style={{
-            background: 'linear-gradient(135deg, hsla(42,92%,56%,0.15), hsla(42,90%,72%,0.08))',
-            boxShadow: '0 0 12px hsla(42,92%,56%,0.15)',
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10" style={{
+            background: 'linear-gradient(135deg, hsla(180,80%,40%,0.15), hsla(174,70%,30%,0.08))',
           }}>
-            <Award size={11} style={{ color: 'hsl(42,92%,56%)' }} />
-            <span className="text-[9px] font-black tracking-wider" style={{ color: 'hsl(42,92%,56%)' }}>12 YEARS</span>
-          </div>
-          {/* Live Session tag */}
-          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-white/10" style={{
-            background: 'linear-gradient(135deg, hsla(160,80%,40%,0.2), hsla(168,70%,30%,0.1))',
-            boxShadow: '0 0 10px hsla(160,80%,40%,0.12)',
-          }}>
-            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'hsl(160,80%,50%)' }} />
-            <span className="text-[9px] font-bold tracking-wider opacity-80">LIVE SESSION</span>
+            <Video size={11} style={{ color: 'hsl(180,80%,55%)' }} />
+            <span className="text-[9px] font-bold tracking-wider opacity-80">ZOOM SESSION</span>
           </div>
         </div>
       </div>
