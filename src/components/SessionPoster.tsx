@@ -108,21 +108,11 @@ const SessionPoster = () => {
           style={{ filter: "brightness(0) invert(1)" }}
         />
         <div className="flex items-center gap-2">
-          {/* 12 Years badge */}
-          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-accent/30" style={{
-            background: 'linear-gradient(135deg, hsla(42,92%,56%,0.15), hsla(42,90%,72%,0.08))',
-            boxShadow: '0 0 12px hsla(42,92%,56%,0.15)',
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10" style={{
+            background: 'linear-gradient(135deg, hsla(180,80%,40%,0.15), hsla(174,70%,30%,0.08))',
           }}>
-            <Award size={11} style={{ color: 'hsl(42,92%,56%)' }} />
-            <span className="text-[9px] font-black tracking-wider" style={{ color: 'hsl(42,92%,56%)' }}>12 YEARS</span>
-          </div>
-          {/* Live Session tag */}
-          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full border border-white/10" style={{
-            background: 'linear-gradient(135deg, hsla(160,80%,40%,0.2), hsla(168,70%,30%,0.1))',
-            boxShadow: '0 0 10px hsla(160,80%,40%,0.12)',
-          }}>
-            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'hsl(160,80%,50%)' }} />
-            <span className="text-[9px] font-bold tracking-wider opacity-80">LIVE SESSION</span>
+            <Video size={11} style={{ color: 'hsl(180,80%,55%)' }} />
+            <span className="text-[9px] font-bold tracking-wider opacity-80">ZOOM SESSION</span>
           </div>
         </div>
       </div>
