@@ -57,6 +57,12 @@ const SessionPoster = () => {
         />
       </div>
 
+      {/* Noise texture overlay */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.035]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        backgroundSize: '128px 128px',
+      }} />
+
       {/* Tech grid pattern */}
       <svg className="absolute inset-0 w-full h-full opacity-[0.12] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -68,6 +74,12 @@ const SessionPoster = () => {
           <pattern id="diagLines" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
             <line x1="0" y1="80" x2="80" y2="0" stroke="#1ED6C3" strokeWidth="0.3" />
           </pattern>
+          <pattern id="hexTexture" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+            <polygon points="30,0 60,15 60,37 30,52 0,37 0,15" fill="none" stroke="#1ED6C3" strokeWidth="0.2" opacity="0.4" />
+          </pattern>
+          <pattern id="dotMatrix" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="0.5" fill="#2EF0D1" opacity="0.5" />
+          </pattern>
           <radialGradient id="gridFade" cx="50%" cy="30%" r="70%">
             <stop offset="0%" stopColor="white" stopOpacity="1" />
             <stop offset="100%" stopColor="white" stopOpacity="0.03" />
@@ -78,6 +90,8 @@ const SessionPoster = () => {
         </defs>
         <rect width="100%" height="100%" fill="url(#techGrid)" mask="url(#gridMask)" />
         <rect width="100%" height="100%" fill="url(#diagLines)" opacity="0.5" />
+        <rect width="100%" height="100%" fill="url(#hexTexture)" opacity="0.3" mask="url(#gridMask)" />
+        <rect width="100%" height="100%" fill="url(#dotMatrix)" opacity="0.4" />
       </svg>
 
       {/* Glowing orbs */}
