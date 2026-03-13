@@ -45,7 +45,7 @@ const SessionPoster = () => {
       className="w-[480px] overflow-hidden relative text-primary-foreground"
       style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
-        background: "linear-gradient(165deg, hsl(162,50%,8%) 0%, hsl(160,60%,6%) 25%, hsl(165,70%,4%) 50%, hsl(170,50%,7%) 75%, hsl(158,60%,5%) 100%)",
+        background: "linear-gradient(160deg, hsl(168,65%,10%) 0%, hsl(165,55%,7%) 20%, hsl(170,70%,5%) 45%, hsl(162,60%,8%) 70%, hsl(175,50%,6%) 100%)",
       }}
     >
       {/* Background logo watermark */}
@@ -59,33 +59,33 @@ const SessionPoster = () => {
       </div>
 
       {/* Tech grid pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-[0.06] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-[0.08] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="techGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="40" y2="0" stroke="hsl(160,80%,50%)" strokeWidth="0.3" />
-            <line x1="0" y1="0" x2="0" y2="40" stroke="hsl(160,80%,50%)" strokeWidth="0.3" />
-            <circle cx="0" cy="0" r="1.2" fill="hsl(160,80%,60%)" />
+            <line x1="0" y1="0" x2="40" y2="0" stroke="hsl(165,80%,45%)" strokeWidth="0.3" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="hsl(165,80%,45%)" strokeWidth="0.3" />
+            <circle cx="0" cy="0" r="1" fill="hsl(165,80%,55%)" />
           </pattern>
           <pattern id="diagLines" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="80" x2="80" y2="0" stroke="hsl(160,70%,45%)" strokeWidth="0.2" />
+            <line x1="0" y1="80" x2="80" y2="0" stroke="hsl(165,70%,40%)" strokeWidth="0.3" />
           </pattern>
-          <radialGradient id="gridFade" cx="50%" cy="35%" r="65%">
+          <radialGradient id="gridFade" cx="50%" cy="30%" r="70%">
             <stop offset="0%" stopColor="white" stopOpacity="1" />
-            <stop offset="100%" stopColor="white" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="white" stopOpacity="0.05" />
           </radialGradient>
           <mask id="gridMask">
             <rect width="100%" height="100%" fill="url(#gridFade)" />
           </mask>
         </defs>
         <rect width="100%" height="100%" fill="url(#techGrid)" mask="url(#gridMask)" />
-        <rect width="100%" height="100%" fill="url(#diagLines)" opacity="0.5" />
+        <rect width="100%" height="100%" fill="url(#diagLines)" opacity="0.6" />
       </svg>
 
       {/* Glowing orbs */}
-      <div className="absolute top-[-60px] right-[-40px] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(160,80%,40%,0.18) 0%, transparent 65%)' }} />
-      <div className="absolute bottom-[100px] left-[-60px] w-[250px] h-[250px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(168,70%,35%,0.12) 0%, transparent 65%)' }} />
-      <div className="absolute top-[40%] right-[-30px] w-[200px] h-[200px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(42,90%,56%,0.06) 0%, transparent 65%)' }} />
-      <div className="absolute bottom-[-40px] right-[30%] w-[180px] h-[180px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(160,90%,45%,0.10) 0%, transparent 60%)' }} />
+      <div className="absolute top-[-60px] right-[-40px] w-[350px] h-[350px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(165,80%,35%,0.22) 0%, transparent 60%)' }} />
+      <div className="absolute bottom-[100px] left-[-60px] w-[280px] h-[280px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(170,70%,30%,0.16) 0%, transparent 60%)' }} />
+      <div className="absolute top-[35%] right-[-20px] w-[250px] h-[250px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(160,90%,40%,0.12) 0%, transparent 55%)' }} />
+      <div className="absolute bottom-[-40px] left-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(168,80%,35%,0.14) 0%, transparent 55%)' }} />
 
       {/* Glowing horizontal lines */}
       <div className="absolute top-[18%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(160,80%,50%,0.12), transparent)' }} />
