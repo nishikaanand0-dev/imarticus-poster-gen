@@ -59,15 +59,15 @@ const SessionPoster = () => {
       </div>
 
       {/* Tech grid pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-[0.08] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-[0.1] pointer-events-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="techGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="40" y2="0" stroke="hsl(165,80%,45%)" strokeWidth="0.3" />
-            <line x1="0" y1="0" x2="0" y2="40" stroke="hsl(165,80%,45%)" strokeWidth="0.3" />
-            <circle cx="0" cy="0" r="1" fill="hsl(165,80%,55%)" />
+            <line x1="0" y1="0" x2="40" y2="0" stroke="hsl(180,80%,50%)" strokeWidth="0.3" />
+            <line x1="0" y1="0" x2="0" y2="40" stroke="hsl(180,80%,50%)" strokeWidth="0.3" />
+            <circle cx="0" cy="0" r="1.2" fill="hsl(180,90%,65%)" />
           </pattern>
           <pattern id="diagLines" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="80" x2="80" y2="0" stroke="hsl(165,70%,40%)" strokeWidth="0.3" />
+            <line x1="0" y1="80" x2="80" y2="0" stroke="hsl(174,70%,45%)" strokeWidth="0.3" />
           </pattern>
           <radialGradient id="gridFade" cx="50%" cy="30%" r="70%">
             <stop offset="0%" stopColor="white" stopOpacity="1" />
