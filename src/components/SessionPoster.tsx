@@ -7,7 +7,7 @@ import {
   KeyRound,
   Hash,
   User,
-  Award,
+  
   type LucideIcon,
 } from "lucide-react";
 import imarticusLogo from "@/assets/imarticus-logo.svg";
