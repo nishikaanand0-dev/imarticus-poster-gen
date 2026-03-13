@@ -82,10 +82,10 @@ const SessionPoster = () => {
       </svg>
 
       {/* Glowing orbs */}
-      <div className="absolute top-[-60px] right-[-40px] w-[350px] h-[350px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(165,80%,35%,0.22) 0%, transparent 60%)' }} />
-      <div className="absolute bottom-[100px] left-[-60px] w-[280px] h-[280px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(170,70%,30%,0.16) 0%, transparent 60%)' }} />
-      <div className="absolute top-[35%] right-[-20px] w-[250px] h-[250px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(160,90%,40%,0.12) 0%, transparent 55%)' }} />
-      <div className="absolute bottom-[-40px] left-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(168,80%,35%,0.14) 0%, transparent 55%)' }} />
+      <div className="absolute top-[-60px] right-[-40px] w-[350px] h-[350px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(180,80%,45%,0.25) 0%, transparent 60%)' }} />
+      <div className="absolute bottom-[100px] left-[-60px] w-[280px] h-[280px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(174,70%,40%,0.18) 0%, transparent 60%)' }} />
+      <div className="absolute top-[35%] right-[-20px] w-[250px] h-[250px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(180,90%,50%,0.15) 0%, transparent 55%)' }} />
+      <div className="absolute bottom-[-40px] left-[20%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsla(178,80%,45%,0.16) 0%, transparent 55%)' }} />
 
       {/* Glowing horizontal lines */}
       <div className="absolute top-[18%] left-0 right-0 h-[1px] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent, hsla(180,80%,60%,0.18), transparent)' }} />
