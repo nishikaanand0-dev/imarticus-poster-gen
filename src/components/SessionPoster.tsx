@@ -45,7 +45,7 @@ const SessionPoster = () => {
       className="w-[480px] overflow-hidden relative text-primary-foreground"
       style={{
         fontFamily: "'Plus Jakarta Sans', sans-serif",
-        background: "linear-gradient(165deg, hsl(162,50%,8%) 0%, hsl(160,60%,6%) 25%, hsl(165,70%,4%) 50%, hsl(170,50%,7%) 75%, hsl(158,60%,5%) 100%)",
+        background: "linear-gradient(160deg, hsl(168,65%,10%) 0%, hsl(165,55%,7%) 20%, hsl(170,70%,5%) 45%, hsl(162,60%,8%) 70%, hsl(175,50%,6%) 100%)",
       }}
     >
       {/* Background logo watermark */}
